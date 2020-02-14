@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ParkingBookingService.Dal.Mapper;
+using ParkingBookingService.Definition.MessageHandling;
 using ParkingBookingService.Definition.Services;
 using ParkingBookingService.WebApi.WebModels;
 
@@ -16,10 +17,12 @@ namespace ParkingBookingService.WebApi.Controllers
     public class BookingController : ControllerBase
     {
         private readonly IBookingService _bookingService;
+        private readonly IParkingBookingProducer _bookingProducer;
 
-        public BookingController(IBookingService bookingService)
+        public BookingController(IBookingService bookingService, IParkingBookingProducer bookingProducer)
         {
             _bookingService = bookingService;
+            _bookingProducer = bookingProducer;
         }
 
         [HttpPost]
@@ -49,6 +52,35 @@ namespace ParkingBookingService.WebApi.Controllers
                 return BadRequest(ae.Message);
                 
             }            
+        }
+
+        [HttpPost("postAsync")]
+        [Consumes(MediaTypeNames.Application.Json)]
+        [ProducesResponseType(StatusCodes.Status202Accepted)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status418ImATeapot)] // ;) should be 500        
+        public async Task<IActionResult> PostAsync(BookingRequestWebModel bookingRequest)
+        {
+            if (ValidateRequest(bookingRequest, out string mess))
+            {
+                return BadRequest($"{nameof(bookingRequest)} {mess}");
+            }
+            try
+            {
+                await _bookingProducer.SendRequest(bookingRequest.Map());
+                return Accepted();
+            }
+            catch (ArgumentNullException aex)
+            {
+                
+                return StatusCode(500); // allways - 500
+
+            }
+            catch (ArgumentException ae)
+            {
+                return BadRequest(ae.Message);
+
+            }
         }
         // it should be FluentValidation or similiar library
         private bool ValidateRequest(BookingRequestWebModel bookingRequest, out string message)
