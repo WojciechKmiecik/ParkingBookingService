@@ -1,0 +1,83 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AA1381A4-9171-4B42-A5E5-6D064A9D3472}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{5B3C1893-069C-4183-8459-C2D170D64823}"
+	ProjectSection(SolutionItems) = preProject
+		scripts\dockerShortcuts.txt = scripts\dockerShortcuts.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E96073A8-E393-43C1-BCC1-D48181732F85}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParkingBookingService.WebApi", "src\ParkingBookingService.WebApi\ParkingBookingService.WebApi.csproj", "{CC00E3FC-A528-4FAF-9C0C-60133A1C338C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logic", "Logic", "{F11AD153-CC24-4CE5-84AA-3C485BBCF227}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{9E4F2A41-1E40-441C-A3EC-73CC136B3526}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParkingBookingService.Dal", "src\ParkingBookingService.Dal\ParkingBookingService.Dal.csproj", "{E63D9060-840B-4FAC-BFEF-005656782AA2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParkingBookingService.Logic", "src\ParkingBookingService.Logic\ParkingBookingService.Logic.csproj", "{C485B7F5-CA1F-470F-A9BE-3EEDBEDFAD47}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParkingBookingService.Reporting", "src\ParkingBookingService.Reporting\ParkingBookingService.Reporting.csproj", "{F6C61A5F-9CE0-499F-906F-A8FCB7ACC316}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Definition", "Definition", "{938605F7-CF89-4D5E-A26C-98A45FFE1515}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParkingBookingService.Definition", "src\ParkingBookingService.Definition\ParkingBookingService.Definition.csproj", "{8D3E0C50-4A87-4900-980D-0DA8FE28B966}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParkingBookingService.Worker", "src\ParkingBookingService.Worker\ParkingBookingService.Worker.csproj", "{C09F7FCD-CC29-46FA-95EC-8D8C38357F09}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC00E3FC-A528-4FAF-9C0C-60133A1C338C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC00E3FC-A528-4FAF-9C0C-60133A1C338C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC00E3FC-A528-4FAF-9C0C-60133A1C338C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC00E3FC-A528-4FAF-9C0C-60133A1C338C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E63D9060-840B-4FAC-BFEF-005656782AA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E63D9060-840B-4FAC-BFEF-005656782AA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E63D9060-840B-4FAC-BFEF-005656782AA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E63D9060-840B-4FAC-BFEF-005656782AA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C485B7F5-CA1F-470F-A9BE-3EEDBEDFAD47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C485B7F5-CA1F-470F-A9BE-3EEDBEDFAD47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C485B7F5-CA1F-470F-A9BE-3EEDBEDFAD47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C485B7F5-CA1F-470F-A9BE-3EEDBEDFAD47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6C61A5F-9CE0-499F-906F-A8FCB7ACC316}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6C61A5F-9CE0-499F-906F-A8FCB7ACC316}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6C61A5F-9CE0-499F-906F-A8FCB7ACC316}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6C61A5F-9CE0-499F-906F-A8FCB7ACC316}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D3E0C50-4A87-4900-980D-0DA8FE28B966}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D3E0C50-4A87-4900-980D-0DA8FE28B966}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D3E0C50-4A87-4900-980D-0DA8FE28B966}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D3E0C50-4A87-4900-980D-0DA8FE28B966}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C09F7FCD-CC29-46FA-95EC-8D8C38357F09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C09F7FCD-CC29-46FA-95EC-8D8C38357F09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C09F7FCD-CC29-46FA-95EC-8D8C38357F09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C09F7FCD-CC29-46FA-95EC-8D8C38357F09}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5B3C1893-069C-4183-8459-C2D170D64823} = {AA1381A4-9171-4B42-A5E5-6D064A9D3472}
+		{E96073A8-E393-43C1-BCC1-D48181732F85} = {AA1381A4-9171-4B42-A5E5-6D064A9D3472}
+		{CC00E3FC-A528-4FAF-9C0C-60133A1C338C} = {E96073A8-E393-43C1-BCC1-D48181732F85}
+		{F11AD153-CC24-4CE5-84AA-3C485BBCF227} = {E96073A8-E393-43C1-BCC1-D48181732F85}
+		{9E4F2A41-1E40-441C-A3EC-73CC136B3526} = {E96073A8-E393-43C1-BCC1-D48181732F85}
+		{E63D9060-840B-4FAC-BFEF-005656782AA2} = {9E4F2A41-1E40-441C-A3EC-73CC136B3526}
+		{C485B7F5-CA1F-470F-A9BE-3EEDBEDFAD47} = {F11AD153-CC24-4CE5-84AA-3C485BBCF227}
+		{F6C61A5F-9CE0-499F-906F-A8FCB7ACC316} = {E96073A8-E393-43C1-BCC1-D48181732F85}
+		{938605F7-CF89-4D5E-A26C-98A45FFE1515} = {E96073A8-E393-43C1-BCC1-D48181732F85}
+		{8D3E0C50-4A87-4900-980D-0DA8FE28B966} = {938605F7-CF89-4D5E-A26C-98A45FFE1515}
+		{C09F7FCD-CC29-46FA-95EC-8D8C38357F09} = {E96073A8-E393-43C1-BCC1-D48181732F85}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {949A2838-1D49-4672-94D2-8133479925A0}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>dotnet-ParkingBookingService.Worker-AF22E614-D207-4FE8-BEE3-3BEF9B0CA2D8</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MassTransit" Version="6.0.2" />
+    <PackageReference Include="MassTransit.Extensions.DependencyInjection" Version="6.0.2" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="6.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.9.10" />
+  </ItemGroup>
+    <ProjectReference Include="..\ParkingBookingService.Logic\ParkingBookingService.Logic.csproj" />
+
+</Project>
